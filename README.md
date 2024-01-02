@@ -63,3 +63,5 @@ Execution Context and Lexical environments
                 console.log(a)
             };
             console.log(b)
+
+        So to sum it up, the creation phase creates and allocates space in memory for your functions and variables. and during the execution phase is when the JS engine goes line by line and excutes your code
