@@ -65,3 +65,7 @@ Execution Context and Lexical environments
             console.log(b)
 
         So to sum it up, the creation phase creates and allocates space in memory for your functions and variables. and during the execution phase is when the JS engine goes line by line and excutes your code
+    
+    Single Threaded, Synchronous Execution
+        Single threaded means only one piece of code is executed at a time.
+        while Synchronous also means signle threaded but with the addition of executing in order.
