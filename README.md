@@ -26,7 +26,7 @@ Execution Context and Lexical environments
 
             The Global EC(execution context) contains two things by default. rather javascript create them for us. It is the global object and the 'this' keyword. The global object (key vale pairs) being anything not inside a function, be it a variable or a function decalration like our test function above. The this keyword is a variable that denotes the actual EC we are into.
         Hoisting and EC- 
-            Hoisting is the process whereby the JS engine allocates space in memory for all variables and functions that is declared and created in the entire EC, so it can access them when it the code is executed. All of this happens during the creation phase of the EC.
+            Hoisting is the process whereby the JS engine allocates space in memory for all variables and functions that is declared and created in the entire EC, so it can access them when the code is executed. All of this happens during the creation phase of the EC.
             During the exection phase is when for example variables are assigned values.
             const a = 10
             Before being executed, JS allocates an undefined type to all variables values. So, const a, before execution phase would be undefined.
@@ -44,6 +44,22 @@ Execution Context and Lexical environments
                 const a = 10;
                 console.log(a)
             }
+            would return undefined in the creation phase, since it is at the end of the day, a variable assignation.
 
-        would return undefined in the creation phase, since it is at the end of the day, a variable assignation.
+            so the below piece of code would return 10 and undefined respectively.
+            test()
+            console.log(b)
+            const b = "hey there"
+            function test(){
+                const a = 10;
+                console.log(a)
+            };
 
+            while the below piece of code would return the true value of b, since it has now had the time to be executed and assigned
+            test()
+            const b = "hey there"
+            function test(){
+                const a = 10;
+                console.log(a)
+            };
+            console.log(b)
