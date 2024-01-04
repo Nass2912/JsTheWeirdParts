@@ -71,4 +71,4 @@ Execution Context and Lexical environments
         while Synchronous also means signle threaded but with the addition of executing in order.
 
     Function Invocation and Execution Stack
-        So, as discussed above, every funtion invoked creates a new EC on top of the already existing global EC . It stacks up and kindof follow the LIFO prinnciple. The last EC created is the the one that is currently being executed.
+        So, as discussed above, every funtion invoked creates a new EC on top of the already existing global EC . It stacks up and kindof follow the LIFO prinnciple. The last EC created is the the one that is currently being executed. Once it has been processed, it gets popped out of the stack and then the one below it executes till the only thing left is the Global EC
