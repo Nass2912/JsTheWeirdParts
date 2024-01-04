@@ -69,3 +69,6 @@ Execution Context and Lexical environments
     Single Threaded, Synchronous Execution
         Single threaded means only one piece of code is executed at a time.
         while Synchronous also means signle threaded but with the addition of executing in order.
+
+    Function Invocation and Execution Stack
+        So, as discussed above, every funtion invoked creates a new EC on top of the already existing global EC . It stacks up and kindof follow the LIFO prinnciple. The last EC created is the the one that is currently being executed.
