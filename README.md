@@ -78,3 +78,6 @@ Execution Context and Lexical environments
 
     Scope
         Where a variable at any given time can be accessed
+
+        Scope Chain
+            Links to the outer environment from it's lexical position
