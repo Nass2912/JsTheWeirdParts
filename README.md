@@ -108,3 +108,14 @@ Execution Context and Lexical environments
             }
             var myVar = 1
             b()
+
+            In that same sense if we didn't declare myVar in function b, it would fallback to the GEC and the output would be back to 1, as shown below.
+
+            function b(){
+                function a(){
+                    console.log(myVar);
+                }
+                a()
+            }
+            var myVar = 1
+            b()
