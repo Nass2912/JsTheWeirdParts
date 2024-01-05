@@ -77,7 +77,7 @@ Execution Context and Lexical environments
         Basically where our variables are stored and relate to each other in memory
 
     Scope
-        Where a variable at any given time can be accessed
+        Where a variable at any given time can be accessed and available in your code. So if we call a same function twice, that means two execution context, which creates two different spaces in memory.
 
         Scope Chain
             Links to the outer environment from it's lexical position
@@ -119,3 +119,5 @@ Execution Context and Lexical environments
             }
             var myVar = 1
             b()
+
+        Scope and Let ES6
