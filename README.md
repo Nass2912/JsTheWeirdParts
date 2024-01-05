@@ -81,3 +81,30 @@ Execution Context and Lexical environments
 
         Scope Chain
             Links to the outer environment from it's lexical position
+            for example if we have this piece of code
+
+            function a(){
+                console.log(myVar);
+            }
+
+            function b(){
+                var myVar = 2
+                a()
+            }
+            var myVar = 1
+            b()
+
+            The output would be 1 . Since it can't find myVar inside of the execution context it currently is in, it falls back to the outer scope, in this case the GEC.
+
+            If function a was nested in function b, then the output would be 2 since it found the myVar in the outer scope, which in this case is the function b, as shown below
+
+
+            function b(){
+                function a(){
+                    console.log(myVar);
+                }
+                var myVar = 2
+                a()
+            }
+            var myVar = 1
+            b()
