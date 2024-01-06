@@ -122,3 +122,6 @@ Execution Context and Lexical environments
 
         Scope and Let ES6
             let is block scoped instead of function scoped. During the execution phase the let variable is still created and assigned an undefined value
+
+This keyword
+this keyword is directly dependent on who is calling it. for eg : if you say I'm having a good time, the I refers to you and it's denoted by this keyword in js
