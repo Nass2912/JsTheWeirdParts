@@ -181,3 +181,8 @@ Types and Javascript
                 is going to return 3,3,3
 
                 This is because equality operator '=' has right to left associativity, meaning b = c will be exceuted first which returns 3 and then a = b will be run.
+
+                another example
+                let a = 4 + 3 * 5
+                    the precedence states that 3 * 5 will be executed first and returned the value 15
+                    and then 4 will be added to that 15 to return 19 total
