@@ -184,5 +184,5 @@ Types and Javascript
 
                 another example
                 let a = 4 + 3 * 5
-                    the precedence states that 3 * 5 will be executed first and returned the value 15
+                    Since multiply has precedence level 13 and addition level 12, it means that 3 * 5 will be executed first and returned the value 15
                     and then 4 will be added to that 15 to return 19 total
