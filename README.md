@@ -233,3 +233,17 @@ Types and Javascript
                     Now const b = 0 < 1 which returns true.
 
                     JS does not make sense, but kindof does!
+
+            Equality Operator
+                We have three ways of doing equality operator. To keep it simple
+                Two equals '==' is loose equality (ie without type comparison)
+                so 2 == '2' will return true since it is coerced
+
+                Three equals '===' is strict equality operator( No coercion takes place here)
+                so 2 === '2' will return false
+
+                We also have the not equal loose operator and not equal strict operator '!=' and '!=='
+                
+                The third one is Object.is to compare two types. ES6
+                Object.is(2, 2) returns true
+                Object.is('2',2) returns false
