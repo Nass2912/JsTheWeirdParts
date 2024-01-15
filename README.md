@@ -170,6 +170,5 @@ Types and Javascript
             
             Associativity
                 Basically, what order operators are exceuted or called. left to right or right to left
-                when functions have same precedence
                 find on this link the order preferences for js
                 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table
