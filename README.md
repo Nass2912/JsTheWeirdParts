@@ -170,5 +170,14 @@ Types and Javascript
             
             Associativity
                 Basically, what order operators are exceuted or called. left to right or right to left
+                when functions have same precedence
                 find on this link the order preferences for js
                 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table
+
+                for example
+                let a = 1, b = 2, c = 3
+                a = b = c
+                console.log(a,b,c)
+                is going to return 3,3,3
+
+                This is because equality operator '=' has right to left associativity, meaning b = c will be exceuted first which returns 3 and then a = b will be run.
