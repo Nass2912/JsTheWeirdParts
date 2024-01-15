@@ -203,3 +203,33 @@ Types and Javascript
                 JS will convert the 1 to a string '1' so as it can carry out the addition(well concatenation in that case to be more precise.)
                 So the code below will also return '12'
                 let b = '1' + 2
+
+                Now for the weird part - 
+                Say we have this statement
+                const a = 1 < 2  < 3
+                    Easy, this return true, since 2 is less than 1 and 3 is less than 2
+                
+                now if we have this one
+                const b = 3 < 2 < 1
+                    Should return false right?But it does not, it returns true again ?!?!?!
+                    Actually, there's a very good explanation for this.
+                
+                The Associativity of comparison operators are from left to right.
+                So for the case of const a = 1 < 2  < 3
+                    1 is less than 2 evaluates to true.
+                    So then true is then compared to 3 like so const a = true < 3
+                    Now, we have a type incompatibility. So the true will be coerced by JS into a Number data type, using this built-in method called Number(expression)
+                    So Number(true) will return 1.
+                    Then finally const a will be equal to 1 < 3 , which evaluates to true.
+
+                    So far so good.....
+                In the case of const b = 3 < 2 < 1 , the same concept applies.
+                    the comparison os from left to right accprding to it's respective associativity rule.
+                    So, 3 < 2 is evaluated and the result is false. which makes sense
+                    Then, that false values is compared to the 1 like so 
+                    const b = false < 1
+                    Again, type incompatibility.
+                    So, false will be coerced to a number using the built-in method Number(false) which returns 0
+                    Now const b = 0 < 1 which returns true.
+
+                    JS does not make sense, but kindof does!
