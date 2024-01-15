@@ -131,4 +131,4 @@ Execution Context and Lexical environments
             Turns out, the browser contains other elements than just the Javascript engine. It has a Rendering Engine which renders the page, styled and all, it has a HTTP Request engine of some kind to make these requests and other elements also.
             So when we say async requests, it's more delegating requests than anyhring else, the browser has hooks that just calls the engine responsible for that particular task you want to do and your JS just waits for it's completion to proceed further.
 
-            Amazing right! 
+            So say for example we have a click event. These events are pushed inside of an event queue, which will be periodically looked at when the JS engine's execution stack is empty (ie after the execution context and global execution context have been completed)
