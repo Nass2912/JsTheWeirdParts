@@ -249,3 +249,14 @@ Types and Javascript
                 Object.is('2',2) returns false
 
                 More details here : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
+
+            Existence and Booleans
+                So for example we have this snippet below.
+
+                    const a ;
+                    if(a){
+                        console.log("a contains a value")
+                    }
+                This will output nothing since a is not defined and will be coerced to false
+                On the otherhand, if const a = '1'
+                it will return 'a contains a value', since '1' will be coerced to true using the built-in method Boolean('1')
