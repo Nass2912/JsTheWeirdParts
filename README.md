@@ -189,6 +189,6 @@ Types and Javascript
 
                 But if we did 
                 let a = (4 + 3) * 5
-                since (...) has higher precedence, 4 + 3 will be executed first then the multiplication will be carried out to give 35
+                since (...) has higher precedence of level 19 , 4 + 3 will be executed first then the multiplication will be carried out to give 35
 
                 Crazy right!
