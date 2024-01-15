@@ -123,5 +123,12 @@ Execution Context and Lexical environments
         Scope and Let ES6
             let is block scoped instead of function scoped. During the execution phase the let variable is still created and assigned an undefined value
 
-        Async Callbacks
-            
+    This keyword
+        this keyword is directly dependent on who is calling it. for eg : if you say I'm having a good time, the I refers to you and it's denoted by this keyword in js
+
+    ASYNCHRONOUS REQUESTS
+        If Javascript is single threaded and synchronous, how the hell does the browser does thing asynchronously?
+            Turns out, the browser contains other elements than just the Javascript engine. It has a Rendering Engine which renders the page, styled and all, it has a HTTP Request engine of some kind to make these requests and other elements also.
+            So when we say async requests, it's more delegating requests than anyhring else, the browser just calls the engine responsible for that particular task you want to do and your JS just waits for it's completion to proceed further.
+
+            Amazing right! 
