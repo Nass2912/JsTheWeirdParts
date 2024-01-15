@@ -194,4 +194,12 @@ Types and Javascript
                 Crazy right!
             
             Coercion
-                The process of converting a value from one type to another 
+                The process of converting a value from one type to another
+                So we can also kindof use the concept of precedence to get a better understanding of this phenomenon.
+                So JS will prioritise converting a NUMBER to a STRING.
+                for example if we have the code below
+                let a = 1 + '2'
+                it will return us '12'
+                JS will convert the 1 to a string '1' so as it can carry out the addition(well concatenation in that case to be more precise.)
+                So the code below will also return '12'
+                let b = '1' + 2
