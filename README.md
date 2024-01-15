@@ -247,3 +247,5 @@ Types and Javascript
                 The third one is Object.is to compare two types. ES6
                 Object.is(2, 2) returns true
                 Object.is('2',2) returns false
+
+                More details here : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
