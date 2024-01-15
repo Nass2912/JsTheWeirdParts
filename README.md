@@ -138,4 +138,11 @@ Execution Context and Lexical environments
 Second Part
 Types and Javascript
     Dynamic Typing
-        You don't tell the engine what data type a variable holds, it will deduce it while running the code.
+        You don't tell the engine what data type a variable holds, it will deduce it while running the code. So in reality, one variable can hold several data types.s
+            The difference with static typing and dynamic typing is shown below.
+            In c++
+                bool isABool = 'jeff' // Error!
+            In JS
+                let/var isABool = 'jeff' // No Error!
+                isABool = true // No Error!
+                isABool = 21 // No Error!
