@@ -192,3 +192,6 @@ Types and Javascript
                 since (...) has higher precedence of level 19, 4 + 3 will be executed first then the multiplication will be carried out to give 35
 
                 Crazy right!
+            
+            Coercion
+                The process of converting a value from one type to another 
