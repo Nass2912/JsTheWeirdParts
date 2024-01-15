@@ -260,3 +260,4 @@ Types and Javascript
                 This will output nothing since a is not defined and will be coerced to false
                 On the otherhand, if const a = '1'
                 it will return 'a contains a value', since '1' will be coerced to true using the built-in method Boolean('1')
+                So we can use coercion and if statements to check and evaluate variables. Pretty handy
