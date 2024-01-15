@@ -279,3 +279,20 @@ Types and Javascript
                     console.log(`Hello ${name}`)
                 }
                 In this case, name inside of the greet function will be evaluated to the first expression that coerces to true. So, if Boolean(undefined) evaluates to false, it goes to the second expression and Boolean('stranger') evaluates to true, so it will return the string 'stranger' and assign it to name. Since || has a higher precedence than = , || is executed first.
+            
+            Frameworks and the script tag
+                So say that inside of an html body, we have this.
+                <body>
+                    <script src = './lib1.js'/>
+                    <script src = './lib2.js'/>
+                    <script src = './index.js'/>
+                </body>
+
+                It does not seperate the script code into several ECs, rather it stack and piles them up into a single JS file (ie our global execution context).
+                So, we could have in lib1.js this snippet
+                let mySpace = 'lib1'
+
+                and have console.log(mySpace) in our index.js and it will execute fine returning us 'lib1'
+                Then if in lib2.js we have mySpace = 'lib2'
+                In our app.js the console.log(mySpace will evaluate to 'lib2')
+                
