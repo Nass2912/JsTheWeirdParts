@@ -162,3 +162,4 @@ Types and Javascript
         is syntatic sugar for a pre-written function in JS that does addition. 
         function add(3, 4) (just an example, it's maybe not exactly as is)
         So the JS parser then converts what we write above to the weird function below and then it gets executed
+        True for all other operators ( + , -, *, /, >, <, ==)
