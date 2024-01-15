@@ -134,3 +134,8 @@ Execution Context and Lexical environments
             So say for example we have a click event. These events are pushed inside of an event queue, which will be periodically looked at when the JS engine's execution stack is empty (ie after the execution context and global execution context have been completed)
 
             So, what appears asynchronous, is actually not the case, so long functions, or long exections on the exectuion stack will definitely alter the execution timing of all other async events happening.
+
+Second Part
+Types and Javascript
+    Dynamic Typing
+        You don't tell the engine what data type a variable holds, it will deduce it while running the code.
