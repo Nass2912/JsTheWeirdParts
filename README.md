@@ -156,10 +156,20 @@ Types and Javascript
             string - Any text in between single or double quotes
             symbol - They are used to represent unique and immutable values that can be used as identifiers or keys in objects.
     Operators
-        It is a special function writtenly in a different syntatic manner.
-        For example
-        const a = 3 + 4
-        is syntatic sugar for a pre-written function in JS that does addition. 
-        function add(3, 4) (just an example, it's maybe not exactly as is)
-        So the JS parser then converts what we write above to the weird function below and then it gets executed
-        True for all other operators ( + , -, *, /, >, <, ==)
+            It is a special function writtenly in a different syntatic manner.
+            For example
+            const a = 3 + 4
+            is syntatic sugar for a pre-written function in JS that does addition. 
+            function add(3, 4) (just an example, it's maybe not exactly as is)
+            So the JS parser then converts what we write above to the weird function below and then it gets executed
+            True for all other operators ( + , -, *, /, >, <, ==)
+        
+        Operator Precedence and Associativity
+            Operator precedence
+                Determines which operator function gets called first when there are multiple operators on a single line ( higher precedence wins)
+            
+            Associativity
+                Basically, what order operators are exceuted or called. left to right or right to left
+                when functions have same precedence
+                find on this link the order preferences for js
+                https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table
