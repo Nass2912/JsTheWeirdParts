@@ -261,3 +261,21 @@ Types and Javascript
                 On the otherhand, if const a = '1'
                 it will return 'a contains a value', since '1' will be coerced to true using the built-in method Boolean('1')
                 So we can use coercion and if statements to check and evaluate variables. Pretty handy
+            
+            Default Values
+                Another handy trick is to use or operator over lenghty if/else statements.
+                for example we have the function greet below
+
+                const greet = (name) => {
+                    console.log(`Hello ${name}`)
+                }
+
+                we could call greet() like so without an error, since name is allocated a value of undefined when the global execution is lauched.
+                It will return us "Hello undefined" thanks or not thanks to coercion.
+                What we could do is something like below
+
+                const greet = (name) => {
+                    name = name || 'stranger'
+                    console.log(`Hello ${name}`)
+                }
+                In this case, name inside of the greet function will be evaluated to the first expression that coerces to true. So, if Boolean(undefined) evaluates to false, it goes to the second expression and Boolean('stranger') evaluates to true, so it will return the string 'stranger' and assign it to name. Since || has a higher precedence than = , || is executed first.
