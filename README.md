@@ -146,3 +146,19 @@ Types and Javascript
                 let/var isABool = 'jeff' // No Error!
                 isABool = true // No Error!
                 isABool = 21 // No Error!
+    Primitive Type
+        It is a type of data that represents a single value. So no objects(object is a collection of key/value pairs).
+        In JS, we have six of them
+            undefined - To represent nothingness, also the base type assigned by the JS engine if we don't assign a variable
+            null - Also to represent nothingness. We use it when we want to assign nothingness to a variable instead of undefined to avoid confusion or unwanted errors
+            boolean - true or false
+            number - In js we only have floating point number, basically every number we assign has some decimals. That's why math is sometimes weird with js
+            string - Any text in between single or double quotes
+            symbol - They are used to represent unique and immutable values that can be used as identifiers or keys in objects.
+    Operators
+        It is a special function writtenly in a different syntatic manner.
+        For example
+        const a = 3 + 4
+        is syntatic sugar for a pre-written function in JS that does addition. 
+        function add(3, 4) (just an example, it's maybe not exactly as is)
+        So the JS parser then converts what we write above to the weird function below and then it gets executed
