@@ -356,3 +356,29 @@ Third Part - Object and Functions
         const jsonVariable = `{"firstName":"john","lastName":"wick","address":{"state":"NY","addressLine1":"12, rue don't exist"}}`
 
         and to convert a JSON back to an object, we do JSON.parse(jsonVariable) and it's back to the OG object
+
+    Functions are Objects
+        First Class functions
+            Everything you can do with other types(string, number, objects), you can do with functions. For example assign it to variables, pass them around, create them on the fly. So every function in JS is essentially a special type of first-class objects.
+
+            So, as for objects, we can attach a primitive to it, another object or even a function. Mind Blown!!! and since it is a special type of object it also contains or may not contain a name(named and anonymous function) and also a code ( basically everything that sits inside of our function and that is executable using the () syntax)
+            So for example : 
+                function greet(){
+                    console.log("Hello From this Crazy JS world")
+                }
+            So if we call greet(), we are executing the code inside of it.
+            Now if we do greet.greetings = "Hello! it works too" and console.log it, it is going to return us "Hello! it works too"
+
+            We can attach objects too like so 
+                greet.meta = {
+                    name: "function",
+                    prop: "first class function"
+                }
+            
+            And attach a function to a function
+                greet.aFunction = () => {
+                    console.log("I am an attached function")
+                }
+            
+            Alright, that's enough Javascript for today!
+        
