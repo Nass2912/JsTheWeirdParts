@@ -317,4 +317,4 @@ Third Part - Object and Functions
             person.tellMeMyName = function() {
             return this.firstName + " " + this.lastName;
             }
-        and both basically creates an object, just two different syntaxes
+        and both basically creates an object, just two different syntaxes, the first one is called object literal and the other is the dot syntax
