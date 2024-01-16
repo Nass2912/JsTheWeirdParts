@@ -333,3 +333,26 @@ Third Part - Object and Functions
         So if we were to call that same greet property but within the 2 different objects, we would get different results
             english.greet is going to return "Hello!"
             spanish.greet is going to return "Hola!"
+
+    JSON vs Objects
+        So, objects and Json does look quite alike right ? 
+        True and also not true.
+        Json is more strict than objects in term of writing it. You cannot pass a function to a json.
+        And your Json has to be inside of a quoted string.
+        Luckily we have helpers in JS that helps us to convery an object to JSON and vice versa.
+            const person = {
+                firstName: "john",
+                lastName: "wick",
+                address: {
+                    state: "NY",
+                    addressLine1: "12, rue don't exist"
+                },
+            }
+
+        We can do JSON.stringify(person) and it will be converted to a JSON like below
+
+        `{"firstName":"john","lastName":"wick","address":{"state":"NY","addressLine1":"12, rue don't exist"}}`
+
+        const jsonVariable = `{"firstName":"john","lastName":"wick","address":{"state":"NY","addressLine1":"12, rue don't exist"}}`
+
+        and to convert a JSON back to an object, we do JSON.parse(jsonVariable) and it's back to the OG object
