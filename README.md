@@ -318,3 +318,18 @@ Third Part - Object and Functions
             return this.firstName + " " + this.lastName;
             }
         and both basically creates an object, just two different syntaxes, the first one is called object literal and the other is the dot syntax
+    
+    NameSpaces - 
+        Namespace refers to the programming paradigm of providing scope to the identifiers (names of types, functions, variables, etc) to prevent collisions between them. For instance, the same variable name might be required in a program in different contexts.
+
+        Js lacks default namespaces, however we can use objects to kindof create namespaces
+        for example
+            const english = {
+                greet: "Hello!"
+            }
+            const spanish = {
+                greet: "Hola!"
+            }
+        So if we were to call that same greet property but within the 2 different objects, we would get different results
+            english.greet is going to return "Hello!"
+            spanish.greet is going to return "Hola!"
