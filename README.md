@@ -376,4 +376,48 @@
                 }
             
             Alright, that's enough Javascript for today!
+
+##### Functions Statement v/s experssion
+        Expression - 
+            So in JS any piece of code that results in a value is called an expression, and every expression returns a value. That's why when you type in a = 3 in your console, it outputs the 3 automatically.
         
+        Statements - 
+            Statement just do the work and does not return a value. For example : 
+                if( a > 3) {
+
+                }
+            This statement does not return a value, so we cannot really save it in a variable.
+                const a = if( a > 3) {} // ERROR!
+        
+             So bottom line is, since funtions are objects, there are both function expressions and function statements.
+
+        Function Statements - 
+            So the basic Fat function that we know so far for eg
+                function greet(){
+                    console.log("Hello")
+                }
+            This function in itself does not get returned, since it is just a statement.
+        
+        Function Expression -
+            But this one below
+                const anonyCall = function(){
+                    console.log("Hi")
+                }
+            will return the function, which is anonymous in this case, and we are saving it inside on the anonyCall variable.
+
+        Function as parameters
+            Suppose we have this logger function
+                const logger = (item) => {
+                    console.log(item)
+                }
+            Then we call it like so logger(()=>{console.log('Can do too!')})
+            So here, we're passing a function as a paramter to our logger method.
+            This will return us ()=>{console.log('Can do too!')}
+
+            So then if we want to execute the function, we could change the logger to this
+                const logger = (item) => {
+                    item();
+                }     
+            and that will return us 'Can do too!' 
+
+##### By Value v/s By Reference
