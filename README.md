@@ -310,11 +310,11 @@ Third Part - Object and Functions
             }
         }
     
-    or like so
-        const person = new Object()
-        person.firstName = "john"
-        person.lastName = "wick"
-        person.tellMeMyName = function() {
-           return this.firstName + " " + this.lastName;
-        }
-    and both basically creates an object, just two different syntaxes
+        or like so
+            const person = new Object()
+            person.firstName = "john"
+            person.lastName = "wick"
+            person.tellMeMyName = function() {
+            return this.firstName + " " + this.lastName;
+            }
+        and both basically creates an object, just two different syntaxes
