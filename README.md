@@ -445,3 +445,5 @@
 
             In the case that we do const b = { greeting: "Hola!" }, we are completely overriding const b above.
             Now, JS will see that it does not exist, we are not setting it to a pre-exisiting variable, hence it will create a new space in memory for this one.
+
+##### Object, Function and This
