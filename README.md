@@ -297,3 +297,24 @@ Types and Javascript
                 In our app.js the console.log(mySpace will evaluate to 'lib2')
                 
 Third Part - Object and Functions
+    Objects - A collection of key/value pairs. It can be primitive, another nested object or method/functions
+        const person = {
+            firstName: "john",
+            lastName: "wick",
+            address: {
+                state: "NY",
+                addressLine1: "12, rue don't exist"
+            },
+            tellMeMyName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+    
+    or like so
+        const person = new Object()
+        person.firstName = "john"
+        person.lastName = "wick"
+        person.tellMeMyName = function() {
+           return this.firstName + " " + this.lastName;
+        }
+    and both basically creates an object, just two different syntaxes
