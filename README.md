@@ -421,3 +421,17 @@
             and that will return us 'Can do too!' 
 
 ##### By Value v/s By Reference
+        By Value - 
+            All primitive data types are referenced by value. Say we have the code below
+            const a = 3
+            const b = a
+            What happen now is, b is going to be a copy of a and b is going to be equal to 3, yet they are 2 distinct and seperate items in memory. Changing one won't affect the other.
+
+        By Reference - 
+            All objects(includes functions which is a special object) are by reference, which means that if we have the code below
+            const a = { greeting: "hi"}
+            const b = a
+            Now this time around, b is going to reference to the content of a and point to the exact same spot as where a points to. So in reality, a and b are referencing/calling the same object.
+            So if we change one, the other will change too
+            b.greeting = "B changed me!"
+            a.greeting and b.greeting both will return "B changed me!"
