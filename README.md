@@ -296,3 +296,4 @@ Types and Javascript
                 Then if in lib2.js we have mySpace = 'lib2'
                 In our app.js the console.log(mySpace will evaluate to 'lib2')
                 
+Third Part - Object and Functions
