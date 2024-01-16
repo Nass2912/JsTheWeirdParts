@@ -6,7 +6,7 @@
 
 
 ### First Part
-    #### Execution Context and Lexical environments
+##### Execution Context and Lexical environments
         Syntax Parsers - 
             <p>Ever gotten a compile error on your terminal, be it react, vue or a simple script you've written. Thank this guy for it.
             It's basically a set of rules and strict commands ( specificities of a particular language for eg: ()=>{} to denote an arrow function ) which is run and checks on whether it is correct or not based on the language you're using.
@@ -65,20 +65,20 @@
             console.log(b)
 
         So to sum it up, the creation phase creates and allocates space in memory for your functions and variables. and during the execution phase is when the JS engine goes line by line and excutes your code
-    #### Single Threaded, Synchronous Execution
+##### Single Threaded, Synchronous Execution
         Single threaded means only one piece of code is executed at a time.
         while Synchronous also means signle threaded but with the addition of executing in order.
 
-    #### Function Invocation and Execution Stack
+##### Function Invocation and Execution Stack
         So, as discussed above, every funtion invoked creates a new EC on top of the already existing global EC . It stacks up and kindof follow the LIFO prinnciple. The last EC created is the the one that is currently being executed. Once it has been processed, it gets popped out of the stack and then the one below it executes till the only thing left is the Global EC
 
-    #### Variable Environment
+##### Variable Environment
         Basically where our variables are stored and relate to each other in memory
 
-    #### Scope
+##### Scope
         Where a variable at any given time is accesible and available in your code. So if we call a same function twice, that means two execution context, which creates two different spaces in memory.
 
-    #### Scope Chain
+##### Scope Chain
         Links to the outer environment from it's lexical position
         for example if we have this piece of code
 
@@ -119,14 +119,14 @@
         var myVar = 1
         b()
 
-    #### Scope and Let ES6
+##### Scope and Let ES6
         let is block scoped instead of function scoped. During the execution phase the let variable is still created and assigned an undefined value
 
     
-    #### This keyword
+##### This keyword
         this keyword is directly dependent on who is calling it. for eg : if you say I'm having a good time, the I refers to you and it's denoted by this keyword in js
 
-    #### Asynchronous Requests
+##### Asynchronous Requests
         If Javascript is single threaded and synchronous, how the hell does the browser does thing asynchronously?
             Turns out, the browser contains other elements than just the Javascript engine. It has a Rendering Engine which renders the page, styled and all, it has a HTTP Request engine of some kind to make these requests and other elements also.
             So when we say async requests, it's more delegating requests than anyhring else, the browser has hooks that just calls the engine responsible for that particular task you want to do and your JS just waits for it's completion to proceed further.
@@ -136,7 +136,7 @@
             So, what appears asynchronous, is actually not the case, so long functions, or long exections on the exectuion stack will definitely alter the execution timing of all other async events happening.
 
 ### Second Part - Types and Javascript
-    #### Dynamic Typing
+##### Dynamic Typing
         You don't tell the engine what data type a variable holds, it will deduce it while running the code. So in reality, one variable can hold several data types.s
             The difference with static typing and dynamic typing is shown below.
             In c++
@@ -145,7 +145,7 @@
                 let/var isABool = 'jeff' // No Error!
                 isABool = true // No Error!
                 isABool = 21 // No Error!
-    #### Primitive Type
+##### Primitive Type
         It is a type of data that represents a single value. So no objects(object is a collection of key/value pairs).
         In JS, we have six of them
             undefined - To represent nothingness, also the base type assigned by the JS engine if we don't assign a variable
@@ -154,7 +154,7 @@
             number - In js we only have floating point number, basically every number we assign has some decimals. That's why math is sometimes weird with js
             string - Any text in between single or double quotes
             symbol - They are used to represent unique and immutable values that can be used as identifiers or keys in objects.
-    #### Operators
+##### Operators
             It is a special function writtenly in a different syntatic manner.
             For example
             const a = 3 + 4
@@ -163,7 +163,7 @@
             So the JS parser then converts what we write above to the weird function below and then it gets executed
             True for all other operators ( + , -, *, /, >, <, ==)
         
-        #### Operator Precedence and Associativity
+    ##### Operator Precedence and Associativity
             Operator precedence
                 Determines which operator function gets called first when there are multiple operators on a single line ( higher precedence wins)
             
@@ -192,7 +192,7 @@
 
                 Crazy right!
             
-        #### Coercion
+    ##### Coercion
             The process of converting a value from one type to another
             So we can also kindof use the concept of precedence to get a better understanding of this phenomenon.
             So JS will prioritise converting a NUMBER to a STRING.
@@ -232,7 +232,7 @@
                 Now const b = 0 < 1 which returns true.
 
                 JS does not make sense, but kindof does!
-        #### Equality Operator
+    ##### Equality Operator
             We have three ways of doing equality operator. To keep it simple
             Two equals '==' is loose equality (ie without type comparison)
             so 2 == '2' will return true since it is coerced
@@ -248,7 +248,7 @@
 
             More details here : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 
-        #### Existence and Booleans 
+    ##### Existence and Booleans 
             So for example we have this snippet below.
 
                 const a ;
@@ -260,7 +260,7 @@
             it will return 'a contains a value', since '1' will be coerced to true using the built-in method Boolean('1')
             So we can use coercion and if statements to check and evaluate variables. Pretty handy
             
-        #### Default Values 
+    ##### Default Values 
             Another handy trick is to use or operator over lenghty if/else statements.
             for example we have the function greet below
 
@@ -278,7 +278,7 @@
             }
             In this case, name inside of the greet function will be evaluated to the first expression that coerces to true. So, if Boolean(undefined) evaluates to false, it goes to the second expression and Boolean('stranger') evaluates to true, so it will return the string 'stranger' and assign it to name. Since || has a higher precedence than = , || is executed first.
 
-        #### Frameworks and the script tag             
+    ##### Frameworks and the script tag             
             So say that inside of an html body, we have this.
             <body>
                 <script src = './lib1.js'/>
@@ -295,7 +295,7 @@
             In our app.js the console.log(mySpace will evaluate to 'lib2')
                 
 ### Third Part - Object and Functions
-    #### Objects - 
+##### Objects - 
     A collection of key/value pairs. It can be primitive, another nested object or method/functions
         const person = {
             firstName: "john",
@@ -318,7 +318,7 @@
             }
         and both basically creates an object, just two different syntaxes, the first one is called object literal and the other is the dot syntax
     
-    #### NameSpaces - 
+##### NameSpaces - 
         Namespace refers to the programming paradigm of providing scope to the identifiers (names of types, functions, variables, etc) to prevent collisions between them. For instance, the same variable name might be required in a program in different contexts.
 
         Js lacks default namespaces, however we can use objects to kindof create namespaces
@@ -332,7 +332,7 @@
         So if we were to call that same greet property but within the 2 different objects, we would get different results
             english.greet is going to return "Hello!"
             spanish.greet is going to return "Hola!"
-    #### JSON vs Objects 
+##### JSON vs Objects 
         So, objects and Json does look quite alike right ? 
         True and also not true.
         Json is more strict than objects in term of writing it. You cannot pass a function to a json.
@@ -355,7 +355,7 @@
 
         and to convert a JSON back to an object, we do JSON.parse(jsonVariable) and it's back to the OG object
 
-    #### Functions are Objects
+##### Functions are Objects
         First Class functions
             Everything you can do with other types(string, number, objects), you can do with functions. For example assign it to variables, pass them around, create them on the fly. So every function in JS is essentially a special type of first-class objects.
 
