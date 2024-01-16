@@ -435,3 +435,13 @@
             So if we change one, the other will change too
             b.greeting = "B changed me!"
             a.greeting and b.greeting both will return "B changed me!"
+        
+        Special Case - 
+            Say we have this code
+                const a = { greeting: "hi"}
+                const b = a
+            b is referencing a and hence contains the object { greeting: "hi"}
+            when we did b = a, the JS engine saw that, const a already has a space in memory and hence references b to it.
+
+            In the case that we do const b = { greeting: "Hola!" }, we are completely overriding const b above.
+            Now, JS will see that it does not exist, we are not setting it to a pre-exisiting variable, hence it will create a new space in memory for this one.
