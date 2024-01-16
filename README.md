@@ -71,6 +71,7 @@
 
 ##### Variable Environment
         Basically where our variables are stored and relate to each other in memory
+        Each execution context has one and also a refernce to the outer environment (scope chain)
 
 ##### Scope
         Where a variable at any given time is accesible and available in your code. So if we call a same function twice, that means two execution context, which creates two different spaces in memory.
