@@ -77,7 +77,7 @@
         Where a variable at any given time is accesible and available in your code. So if we call a same function twice, that means two execution context, which creates two different spaces in memory.
 
 ##### Scope Chain
-        Links to the outer environment from it's lexical position
+        Links to the outer environment from it's lexical position to try and find a variable till it reaches the glocal exectuion context's variable environment
         for example if we have this piece of code
 
         function a(){
