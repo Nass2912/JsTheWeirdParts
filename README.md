@@ -163,7 +163,7 @@
             So the JS parser then converts what we write above to the weird function below and then it gets executed
             True for all other operators ( + , -, *, /, >, <, ==)
         
-    ##### Operator Precedence and Associativity
+##### Operator Precedence and Associativity
             Operator precedence
                 Determines which operator function gets called first when there are multiple operators on a single line ( higher precedence wins)
             
@@ -192,7 +192,7 @@
 
                 Crazy right!
             
-    ##### Coercion
+##### Coercion
             The process of converting a value from one type to another
             So we can also kindof use the concept of precedence to get a better understanding of this phenomenon.
             So JS will prioritise converting a NUMBER to a STRING.
@@ -232,7 +232,7 @@
                 Now const b = 0 < 1 which returns true.
 
                 JS does not make sense, but kindof does!
-    ##### Equality Operator
+##### Equality Operator
             We have three ways of doing equality operator. To keep it simple
             Two equals '==' is loose equality (ie without type comparison)
             so 2 == '2' will return true since it is coerced
@@ -248,7 +248,7 @@
 
             More details here : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 
-    ##### Existence and Booleans 
+##### Existence and Booleans 
             So for example we have this snippet below.
 
                 const a ;
@@ -260,7 +260,7 @@
             it will return 'a contains a value', since '1' will be coerced to true using the built-in method Boolean('1')
             So we can use coercion and if statements to check and evaluate variables. Pretty handy
             
-    ##### Default Values 
+##### Default Values 
             Another handy trick is to use or operator over lenghty if/else statements.
             for example we have the function greet below
 
@@ -278,7 +278,7 @@
             }
             In this case, name inside of the greet function will be evaluated to the first expression that coerces to true. So, if Boolean(undefined) evaluates to false, it goes to the second expression and Boolean('stranger') evaluates to true, so it will return the string 'stranger' and assign it to name. Since || has a higher precedence than = , || is executed first.
 
-    ##### Frameworks and the script tag             
+##### Frameworks and the script tag             
             So say that inside of an html body, we have this.
             <body>
                 <script src = './lib1.js'/>
