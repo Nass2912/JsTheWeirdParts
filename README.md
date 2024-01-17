@@ -499,3 +499,6 @@
 
         So, we can call our function like so 
         myArray[3]('Tommy') and it will get executed and log "Hello Tommy"
+
+##### Arguments and Spread
+    So remember when we said than in Function Execution Context, three things get created ? The variable environment, a reference to the outer environment (for scope chaining) and the 'this' keyword ? .... well add another one to it, it is called arguments and it is a list of all the parameters/arguments that you pass into your function
