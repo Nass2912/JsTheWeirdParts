@@ -448,3 +448,42 @@
             Now, JS will see that it does not exist, we are not setting it to a pre-exisiting variable, hence it will create a new space in memory for this one.
 
 ##### Object, Function and This
+        So this has got to be the weirdest/most debatable quirk of the JS language.
+        the 'this' method, which gets created inside of an Execution Context, together with the variable environment and the outer environment.
+
+        So, say we have this object: 
+            const person = {
+                firstName: "Joe",
+                lastName: "Doe",
+                fullName: function(){
+                    console.log(this)
+                    return `${this.firstName} ${this.lastName}`
+                }
+            }
+        
+        Inside of an object, if we have a function, it's called an object method. Inside of any object method, this refers to the object where it currently sits, in our case the person object.
+
+        But inside of a function, this will refer to the global object always, no matter where the function is located, as long as it is not an object method, it will always refer to the global object.
+
+        So, if we have this function below:
+            function greet(){
+                console.log(this)
+            }
+        this will return us the global object, in the case that we are on NodeJs, it will return the global object, if we are on the browser, the window object it is.
+
+        So, even if we have a nested function in an object method, the keyword this will still refer to the global object and not the object itself.
+            const person = {
+                firstName: "Joe",
+                lastName: "Doe",
+                fullName: function(){
+                    this.firstName = 'Mary'
+                    console.log(this) // will return the updated object
+                    function setName(newName){
+                        this.firstName = newName
+                    }
+                    setName("greg")
+                    console.log(this.firstName) // will not return name greg.
+
+                }
+            }
+        As seen above, the setName function is attached to the global object and not to the person object. So setName will not change the firstName of the person object. It will in fact add a new firstName object to the global object variable and set it to "greg"
