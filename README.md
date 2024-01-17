@@ -489,3 +489,13 @@
         As seen above, the setName function is attached to the global object and not to the person object. So setName will not change the firstName of the person object. It will in fact add a new firstName object to the global object variable and set it to "greg"
 
 ##### Arrays
+    Arrays
+        Collection of anything, that's it 😁
+        and I mean anything, primitives, objects and all
+        for example : 
+        const myArray = [
+            1, false, { name: "Tom", address: "12 rue duese" }, function(name){ console.log("Hello " + name) }
+        ]
+
+        So, we can call our function like so 
+        myArray[3]('Tommy') and it will get executed and log "Hello Tommy"
