@@ -501,4 +501,19 @@
         myArray[3]('Tommy') and it will get executed and log "Hello Tommy"
 
 ##### Arguments and Spread
-    So remember when we said than in Function Execution Context, three things get created ? The variable environment, a reference to the outer environment (for scope chaining) and the 'this' keyword ? .... well add another one to it, it is called arguments and it is a list of all the parameters/arguments that you pass into your function
+    So remember when we said than in Function Execution Context, three things get created ? The variable environment, a reference to the outer environment (for scope chaining) and the 'this' keyword ? .... well add another one to it, it is called arguments and it is a list of all the parameters/arguments that you pass into your function and 'arguments' is a reserve keyword in JS.
+
+    So, if we have this function below
+        function greet(firstName, lastName, address){
+            console.log(firstName, lastName, address)
+            console.log(arguments)
+        }
+    and then we call it without params
+    greet() -
+            It will return us "undefined undefined undefined"
+            The reason being that hoisiting that occurs when the EC is being created which sets all variables/params to undefined
+            and the arguments is going to return us an array of all params of the function like so [undefined undefined undefined]
+        if we call greet("John")
+            It will take John to be the firstName param and the other would be undefined like so  "John undefined undefined"
+        
+        Note that arguments is nomore the preferred way of getting params, there is a new spread way which we will cover shortly.
