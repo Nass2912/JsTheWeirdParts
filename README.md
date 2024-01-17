@@ -487,3 +487,5 @@
                 }
             }
         As seen above, the setName function is attached to the global object and not to the person object. So setName will not change the firstName of the person object. It will in fact add a new firstName object to the global object variable and set it to "greg"
+
+##### Arrays
