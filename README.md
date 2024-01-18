@@ -541,24 +541,24 @@
 
 ##### IIFEs(Immediately Invoked Function Expressions)
     So, it is possible to write a function expression and directly invoke it like below
-    const greeting = function(name){
-        return 'Hello ' + name
-    }("John")
+        const greeting = function(name){
+            return 'Hello ' + name
+        }("John")
 
-    function test(name){
-        console.log(name)
-    }("test")
+        function test(name){
+            console.log(name)
+        }("test")
 
-    const greetingES6 = ((name)=>{
-        console.log(name)
-    })("tester")
+        const greetingES6 = ((name)=>{
+            console.log(name)
+        })("tester")
 
     or it can be anonymous, we then wrap it inside of () to trick the parser into thinkinh it is an expression
 
-    ((name) => {
-        console.log("Hello " + name)
-    })()
+        ((name) => {
+            console.log("Hello " + name)
+        })()
 
-    (function(name){
-        console.log(name)
-    }("test"))
+        (function(name){
+            console.log(name)
+        }("test"))
