@@ -562,3 +562,5 @@
         (function(name){
             console.log(name)
         }("test"))
+
+##### Closures
