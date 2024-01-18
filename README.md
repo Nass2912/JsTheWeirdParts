@@ -516,4 +516,25 @@
         if we call greet("John")
             It will take John to be the firstName param and the other would be undefined like so  "John undefined undefined"
         
-        Note that arguments is nomore the preferred way of getting params, there is a new spread way which we will cover shortly.
+        Note that arguments is no more the preferred way of getting params, there is a new spread way which we will cover shortly.
+
+##### Automatic Semicolon Insertion
+    Right, remember when you just started JS and you were advised to put semicolons at the end of your line, well it is optional on our end, since the JS engine will add it for us if it is not present. So this can be quite difficult to debug or track down, since it is invisible on our end. For example, if we put our object on a new line after a return statement like below, it is going to return us undefined, since when you press enter to get to a newline, it actually is a character, which the JS engine interprets as End of line and adds a semicolon to it. So, very important here to keep the best practices and avoid unecessary new liners.
+
+        function greet(){
+            return 
+            {
+                firstName: "Tom",
+                lastName: "Brad"
+            }
+        }
+
+    console.log(greet()) // undefined
+
+        function greetNumber2(){
+            return {
+                firstName: "Tom",
+                lastName: "Brad"
+            }
+        }
+    console.log(greetNumber2()) // { firstName: "Tom", lastName: "Brad" }
