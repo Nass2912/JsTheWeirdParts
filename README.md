@@ -540,3 +540,15 @@
     console.log(greetNumber2()) // { firstName: "Tom", lastName: "Brad" }
 
 ##### IIFEs(Immediately Invoked Function Expressions)
+    So, it is possible to write a function expression and directly invoke it like below
+    const greeting = function(name){
+        return 'Hello ' + name
+    }("John")
+
+    function test(name){
+        console.log(name)
+    }("test")
+
+    const greetingES6 = ((name)=>{
+        console.log(name)
+    })("tester")
