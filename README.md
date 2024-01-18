@@ -538,3 +538,5 @@
             }
         }
     console.log(greetNumber2()) // { firstName: "Tom", lastName: "Brad" }
+
+##### IIFEs(Immediately Invoked Function Expressions)
