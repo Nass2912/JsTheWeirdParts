@@ -552,3 +552,13 @@
     const greetingES6 = ((name)=>{
         console.log(name)
     })("tester")
+
+    or it can be anonymous, we then wrap it inside of () to trick the parser into thinkinh it is an expression
+
+    ((name) => {
+        console.log("Hello " + name)
+    })()
+
+    (function(name){
+        console.log(name)
+    }("test"))
