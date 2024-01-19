@@ -627,3 +627,5 @@
             })(i), 100);
         }
     So, right here, what we are doing is we are creating an IIFE which has a parameter called j and inside we are logging the j, which for each iteration is going to be set to i . So, this new parameter will be available thanks to scoping and it will actually refer to each iteration of i, since a new function execution context is created and each one has their distinct parameter.
+
+##### Function Factories
