@@ -629,4 +629,28 @@
     So, right here, what we are doing is we are creating an IIFE which has a parameter called j and inside we are logging the j, which for each iteration is going to be set to i . So, this new parameter will be available thanks to scoping and it will actually refer to each iteration of i, since a new function execution context is created and each one has their distinct parameter.
 
 ##### Function Factories
-    A factory function is a function that returns a new object.
+    A factory function is a function that returns a new object. Remember a function too is considered an object
+
+    For example we have this greetMaker function which returns a greet function.
+        function greetMaker(language){
+            return function(firstName, lastName){
+                if(language === 'en'){
+                    console.log("Hello my friend " + firstName + " " + lastName)
+                }
+                if(language === 'es'){
+                    console.log("Hola mi amigo " + firstName + " " + lastName)
+                }
+            }
+        }
+
+        var greetEnglish = greetMaker('en')
+        var greetSpanish = greetMaker('es')
+
+        greetEnglish("Park", "raker") // Hello my friend Park Raker
+        greetSpanish("Park", "raker") // Hola mi amigo Park Raker
+
+        So, what happen here is in the global execution context. we have the function greetMaker, var greetEnglish and var greetSpanish
+
+        When we call greetEnglish with language 'en', a new EC is created and the variable 'en' is stored there. Once the EC is complete, it gets popped off the Execution Stack, but the variable 'en' still remains in memory and is attached to the EC for greetEnglish. So, when we call greetEnglish("Park", "raker"), we get access to that language 'en' thanks to closure and ofc the scope chain.
+
+        So when we run our other function greetSpanish, same thing happens, a new EC is created and the variable 'es' is set and hangs around even when the EC is popped off the stack and it is attached to that greetSpanish EC, which forms a closure around our returned function. SO now when we call greetSpanish("Park", "raker"), what happens is we have access to that 'es' in memory from the greetSpanish EC and hence get the 'es' as language variable
