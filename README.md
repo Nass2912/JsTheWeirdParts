@@ -656,3 +656,16 @@
         So when we run our other function greetSpanish, same thing happens, a new EC is created and the variable 'es' is set and hangs around even when the EC is popped off the stack and it is attached to that greetSpanish EC, which forms a closure around our returned function. SO now when we call greetSpanish("Park", "raker"), what happens is we have access to that 'es' in memory from the greetSpanish EC and hence get the 'es' as language variable
 
 ##### Closures and Callbacks
+    Callback functions are function that we pass to another function, and it is up to that function to execute our function passed (also called first class function).
+    Let's take the setTimeOut function to better understand it.
+
+        function satHiLater(){
+            const message = "I have been run after"
+            setTimeOut(function(){
+                console.log( message +  " 3s")
+            },3000)
+        }
+
+    Now, that function probably takes miliseconds to execute, and that EC is popped off the stack. Now, after three seconds(minimum of 3), that setTimeOut function/api sends the function passed to it to the Call Stack through the event loop. So, now when our function inside of the setTimeOut is called, we still have this message hanging around and attached to our function thank to closure.
+    Callbacks and closures works hand in hand and is widely used in web development, be it DOM manipulation or libraries like Jquery.
+    DOM events also use callback functions.
