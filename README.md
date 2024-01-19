@@ -615,3 +615,15 @@
 
     What's the ouptut ? 0,1,2 ? CORRECT!!
         So, in this case, each loop iteration will create a distinct i variable since let is block scoped and not function scoped. In our case, it means that the result is 0,1,2
+
+    So, how could we use var to give us back the correct output?
+    If we take the function with var above
+
+        for (var i = 0; i < 3; i++) {
+            setTimeout((function(j) {
+                return function(){
+                    console.log(j)
+                }
+            })(i), 100);
+        }
+    So, right here, what we are doing is we are creating an IIFE which has a parameter called j and inside we are logging the j, which for each iteration is going to be set to i . So, this new parameter will be available thanks to scoping and it will actually refer to each iteration of i, since a new function execution context is created and each one has their distinct parameter.
