@@ -585,3 +585,33 @@
         }
         const greeter = greet()
         greeter() // IT will still return the correct phrase, thanks to closure!
+
+    Now, let's get to this infamous interview question about scoping, var and let.
+        for (var i = 0; i < 3; i++) {
+            setTimeout(function() {
+                console.log(i);
+            }, 100);
+        }
+
+        What's the ouptut ? 0,1,2 ? WRONG!!
+        It's 3,3,3
+
+        Now why is that?
+        Well, remember that setTimeOut is an asynchronous function, and hence it get pushed to the call stack/execution stack, while the rest of the code is still being run. That's what async does.
+
+        So, code is run, On creation phase, var is hoisted, since var is function scoped, well in our case the it's in the global scope. Then we hit our first Iteration, i is set to 0 and then the function inside of setTimeOut is pushed to the call stack, waiting for it's 1 milisecond to get executed.
+
+        Next loop, i is now 2, same thing, function in setTimeOut is pushed to the call stack and the code resumes, not waiting for the setTimeOut to kick in, since the global execution context is first on the call stack.
+
+        Same thing for the third iteration and once complete, i is now 3.
+        Now, when the function inside of setTimeOut is run, since var is globally scoped, i = 3 inisde of all three function calls.
+    
+    Now, if we use let
+    for (let i = 0; i < 3; i++) {
+        setTimeout(function() {
+            console.log(i);
+        }, 100);
+    }
+
+    What's the ouptut ? 0,1,2 ? CORRECT!!
+        So, in this case, each loop iteration will create a distinct i variable since let is block scoped and not function scoped. In our case, it means that the result is 0,1,2
