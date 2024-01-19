@@ -654,3 +654,5 @@
         When we call greetEnglish with language 'en', a new EC is created and the variable 'en' is stored there. Once the EC is complete, it gets popped off the Execution Stack, but the variable 'en' still remains in memory and is attached to the EC for greetEnglish. So, when we call greetEnglish("Park", "raker"), we get access to that language 'en' thanks to closure and ofc the scope chain.
 
         So when we run our other function greetSpanish, same thing happens, a new EC is created and the variable 'es' is set and hangs around even when the EC is popped off the stack and it is attached to that greetSpanish EC, which forms a closure around our returned function. SO now when we call greetSpanish("Park", "raker"), what happens is we have access to that 'es' in memory from the greetSpanish EC and hence get the 'es' as language variable
+
+##### Closures and Callbacks
