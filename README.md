@@ -564,3 +564,24 @@
         }("test"))
 
 ##### Closures
+    Now now, the JS ecosystem does not only contains wierd stuff, it also contains super useful features, and of them are closures. Closures enables us to create functions that have access to variables outside of their own scope. In other words, closure gives us access to an outer function's scope from an inner function.
+
+    For example : 
+        function greet(){
+            var name = "Pablo"
+            function display(){
+                console.log("Hello, your name is: " + name)
+            }
+            display()
+        }
+        greet()
+    Will return is the correct phrase "Hello, your name is: Pablo"
+    Or, if we rewrite it like so: 
+        function greet(){
+            var name = "Pablo"
+            return function display(){
+                console.log("Hello, your name is: " + name)
+            }
+        }
+        const greeter = greet()
+        greeter() // IT will still return the correct phrase, thanks to closure!
