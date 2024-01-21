@@ -671,3 +671,25 @@
     DOM events also use callback functions.
 
 ##### Call, Apply, Bind
+    So, say we take our famous object of person.
+        const person = {
+            firstName: "Joe",
+            lastName: "Doe",
+            fullName: function(){
+                return `${this.firstName} ${this.lastName}`
+            }
+        }
+
+        So, if we call the function person.fullName(), we will get back "John Doe" which is correct.
+
+    Now if we put that function inside of another function or a variable and call it like below
+        const logName = () => {
+            person.fullName()
+        }
+        logName()
+
+    or 
+        const callMyName = person.fullName
+        callMyName()
+    
+    In both cases we get "undefined undefined" returned. Why is that? Simply because when the execution context is created for our method call logName(), the this keyword inside of our object method is nomore the object, but rather the global object, which does not contain firstName and lastName.
