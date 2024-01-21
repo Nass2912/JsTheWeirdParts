@@ -693,3 +693,6 @@
         callMyName()
     
     In both cases we get "undefined undefined" returned. Why is that? Simply because when the execution context is created for our method call logName(), the this keyword inside of our object method is nomore the object, but rather the global object, which does not contain firstName and lastName.
+
+    To resolve this issue, we have the bind, apply, call which comes along with any function that we have alongside the this keyword, the executable and the outer environment reference.
+    
