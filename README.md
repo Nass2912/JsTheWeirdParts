@@ -669,3 +669,5 @@
     Now, that function probably takes miliseconds to execute, and that EC is popped off the stack. Now, after three seconds(minimum of 3), that setTimeOut function/api sends the function passed to it to the Call Stack through the event loop. So, now when our function inside of the setTimeOut is called, we still have this message hanging around and attached to our function thank to closure.
     Callbacks and closures works hand in hand and is widely used in web development, be it DOM manipulation or libraries like Jquery.
     DOM events also use callback functions.
+
+##### Call, Apply, Bind
