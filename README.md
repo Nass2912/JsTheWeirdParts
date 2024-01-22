@@ -696,3 +696,35 @@
 
     To resolve this issue, we have the bind, apply, call which comes along with any function that we have alongside the this keyword, the executable and the outer environment reference.
     
+##### Functional Programming
+    Functional programming is a paradigm of building computer programs using expressions and functions without mutating state and data.
+    Well, simply put you code and think in terms of functions.
+
+    For example we have this code below
+        const arr = [1,2,3]
+        const arr2 = []
+        for(let i = 0 ; i < arr.length ; i++) {
+            arr2.push(arr[i])
+        }
+        console.log(arr2)
+
+    Classic, It works, but still classic.
+
+    Now we could create a new function out of the arr2.push to make it more flexible like below.
+
+        const mapForEach = (arr, fn) => {
+            const newArr = []
+            for(let i = 0 ; i < arr.length ; i++){
+                newArr.push(
+                    fn(arr[i])
+                )
+            }
+            return newArr;
+        }
+
+    and then in our function call, we pass in the arr we want and also the function statement.
+        const arr = [1,2,3]
+        const answer = mapForEach(arr, (item) => { return item * 2  })
+
+    No, if we want to check if the items are > 1, we could just change the first-class function like below.
+        const answer = mapForEach(arr, (item) => { return item > 1  })
