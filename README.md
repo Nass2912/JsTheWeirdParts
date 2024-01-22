@@ -726,5 +726,5 @@
         const arr = [1,2,3]
         const answer = mapForEach(arr, (item) => { return item * 2  })
 
-    No, if we want to check if the items are > 1, we could just change the first-class function like below.
+    Now, if we want to check if the items are > 1, we could just change the first-class function like below.
         const answer = mapForEach(arr, (item) => { return item > 1  })
