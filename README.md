@@ -728,3 +728,10 @@
 
     Now, if we want to check if the items are > 1, we could just change the first-class function like below.
         const answer = mapForEach(arr, (item) => { return item > 1  })
+
+### OOP JS
+#### Classical v/s prototypal inheritance
+    So, to start, inheritance is when an object get access to the properties and methods of another object.
+    Classical Inheritance being the most used one, the classic animal class and dog class, where dog inherits properties and methods from Animal class.
+
+    Then, prototypal inheritance, where it is much simpler, more flexible and more extensible way of using objects.
