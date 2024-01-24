@@ -758,3 +758,5 @@
 
     Note that we also have a protoype chain, a bit like our scope chain
     If we do joe.firstName, it is going to return "John", not "default", if there was no name on const joe, then it would go to "default"
+
+#### Everything is an object
