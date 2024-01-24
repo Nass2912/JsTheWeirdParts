@@ -737,3 +737,4 @@
     Then, prototypal inheritance, where it is much simpler, more flexible and more extensible way of using objects.
 
 #### Understanding prototypal inheritance
+    Now, every object and that includes function have a hidden property attached to it called the prototype and it can contain methods and attributes, which any object can use, and since the prototype is an object, it is stored by reference and both objects will point to the same method/attribute
