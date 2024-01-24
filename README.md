@@ -738,3 +738,23 @@
 
 #### Understanding prototypal inheritance
     Now, every object and that includes function have a hidden property attached to it called the prototype and it can contain methods and attributes, which any object can use, and since the prototype is an object, it is stored by reference and both objects will point to the same method/attribute
+
+    So say for example we have these 2 objects below : 
+    const person = {
+        firstName: "Default",
+        lastName: "Default",
+        fullName: () => { return `${this.firstName} ${this.lastName}` }
+    }
+
+    const joe = {
+        firstName: "John",
+        lastName: "Doe"
+    }
+
+    <!-- We don't set the proto ourselves, since it has some performance issues attached to it. This is just for demo purposes -->
+
+    So, here, we can do something like joe.__proto__ = person
+    Now, we can call joe.fullName() and get back the "John Doe"
+
+    Note that we also have a protoype chain, a bit like our scope chain
+    If we do joe.firstName, it is going to return "John", not "default", if there was no name on const joe, then it would go to "default"
