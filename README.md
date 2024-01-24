@@ -735,6 +735,8 @@
     Classical Inheritance being the most used one, the classic animal class and dog class, where dog inherits properties and methods from Animal class.
 
     Then, prototypal inheritance, where it is much simpler, more flexible and more extensible way of using objects.
+    So, what exactly is protoype on objects?
+        Every object in JavaScript has a built-in property, which is called its prototype.The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
 
 #### Understanding prototypal inheritance
     Now, every object and that includes function have a hidden property attached to it called the prototype and it can contain methods and attributes, which any object can use, and since the prototype is an object, it is stored by reference and both objects will point to the same method/attribute
