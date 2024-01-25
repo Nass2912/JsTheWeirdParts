@@ -736,7 +736,40 @@
 
     Then, prototypal inheritance, where it is much simpler, more flexible and more extensible way of using objects.
     So, what exactly is protoype on objects?
-        Every object in JavaScript has a built-in property, which is called its prototype.The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+    Every object in JavaScript has a built-in property, which is called its prototype.The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+
+    When you try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case undefined is returned.
+
+    So, let's take this example : 
+        const person = {
+            firstName: "Default",
+            lastName: "Default",
+            fullName: () => { return `${this.firstName} ${this.lastName}` }
+        }
+        person.greet() // "Default Default"
+
+    If on tehe browser, we do person. , we get a lot of suggestions like below
+        __defineGetter__
+        __defineSetter__
+        __lookupGetter__
+        __lookupSetter__
+        __proto__
+        city
+        constructor
+        greet
+        hasOwnProperty
+        isPrototypeOf
+        propertyIsEnumerable
+        toLocaleString
+        toString
+        valueOf
+    
+    So when we call myObject.toString(), the browser : 
+    looks for toString in myObject
+    can't find it there, so looks in the prototype object of myObject for toString
+    finds it there, and calls it.
+
+    
 
 #### Understanding prototypal inheritance
     Now, every object and that includes function have a hidden property attached to it called the prototype and it can contain methods and attributes, which any object can use, and since the prototype is an object, it is stored by reference and both objects will point to the same method/attribute
@@ -762,3 +795,13 @@
     If we do joe.firstName, it is going to return "John", not "default", if there was no name on const joe, then it would go to "default"
 
 #### Everything is an object
+    Right, we've heard this one, everyhting is an object in JS. To further establish this claim the prototype is here for it.
+    const person = {
+        firstName: "Default",
+        lastName: "Default",
+        fullName: () => { return `${this.firstName} ${this.lastName}` }
+    }
+    If we do Object.getPrototypeOf(person) // we get back Object
+    
+    The object prototype being the lowest protoype object there is, the next protoype chain will lead to null
+
