@@ -884,3 +884,11 @@
     So, we can do a.toFixed(2) and get back 3.00 since the toFixed is a method built-in the protoype of object Number
 
     Pretty cool right
+    So, let's say we have a string
+    const myName = "johnny"
+    console.log(myName.length) // returns 6
+
+    const myObjName = new String("Johnny")
+    console.log(myObjName.length) // returns 6
+
+    So, in these cases, JS wraps up our myName inside of that prototype object automatically and then we get access to the methods inside of that prototype of String
