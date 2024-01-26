@@ -873,3 +873,14 @@
         const pam = new Person("pam", "beesly") // undefined
         jim.getFullName() // error
         pam.getFullName() // error
+
+#### Built-in function constructors
+    So, we have been using function constructors(maybe, i'm assuming here!) without knowing. for example we have the Number constructor like below.
+    const a = new Number(3)
+    console.log(a) // Number {3}
+
+    See how it returns us an object and then inside we have our 3.
+    It also contains the prototype by default a.__proto__ gives us all the function prototype of that number object.
+    So, we can do a.toFixed(2) and get back 3.00 since the toFixed is a method built-in the protoype of object Number
+
+    Pretty cool right
