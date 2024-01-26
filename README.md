@@ -892,3 +892,12 @@
     console.log(myObjName.length) // returns 6
 
     So, in these cases, JS wraps up our myName inside of that prototype object automatically and then we get access to the methods inside of that prototype of String
+
+    We can also add to these protoype methods of the String object like below
+    String.prototype.isLongerThan = function(limit){
+        return this.length < limit
+        <!-- this here will refer to the string object constructed -->
+    }
+
+    now we can do 
+    console.log("Johnny".isLongerThan(3)) // false
