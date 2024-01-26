@@ -901,3 +901,16 @@
 
     now we can do prototypal inheritence and add more to built-in methods
     console.log("Johnny".isLongerThan(3)) // false
+
+    One caveat though, while JS will covnert a string to an object, it won't do it for a number
+    3.toFixed(2) // returns Uncaught SyntaxError: Invalid or unexpected token
+
+    We have no choice here than to call it explicitly like so 
+    const num = new Number(3)
+    now we can do num.toFixed(2)
+    Or even add a custom method, 
+    Number.prototype.isNegative = function(){
+        return this < 0
+    }
+
+    num.isNegative() // false
