@@ -826,3 +826,12 @@
         }
 
         we get back firstName: "John", lastName: "Doe", fullName: () => { return `${this.firstName} ${this.lastName}` }
+        We get back the properties of the proto object too.
+
+        If we don't want that, and want to output only the prop that belongs to john, we can do a check to see if john.hasOwnProperty
+            for(var prop in john) {
+                if(john.hasOwnProperty) {
+                    console.log(`${prop} ${john[prop]}`)
+                }
+            }
+        Now, we get back firstName: "John", lastName: "Doe"
