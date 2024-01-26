@@ -838,3 +838,15 @@
 
 ### Part 4 - Building Objects
 #### Function constructors
+    A normal function that is used to construct objects. The 'this' variable points to a new empty object and that object is automatically returned.
+
+        function Person(firstname, lastname){
+            this.lastname = lastname
+            this.firstname = firstname
+        }
+
+        const jim = new Person("jim", "Halpert")
+        const pam = new Person("pam", "beesly")
+        console.log(jim) // Person {lastname: 'Halpert', firstname: 'jim'}
+        console.log(pam) // Person {lastname: 'beesly', firstname: 'pam'}
+    We get back two new objects.Each with their own this variable
