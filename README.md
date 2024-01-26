@@ -808,3 +808,21 @@
 #### Reflection and Extend
     Reflection - 
         An object can look at itself, listing and changing it's properties and methods
+        So, if we have this object and another john object
+            const person = {
+                firstName: "Default",
+                lastName: "Default",
+                fullName: () => { return `${this.firstName} ${this.lastName}` }
+            }
+
+            const john = {
+                firstName: "John", 
+                lastName: "Doe"
+            }
+        john.__proto__ = person
+
+        for(var prop in john) {
+            console.log(`${prop} ${john[prop]}`)
+        }
+
+        we get back firstName: "John", lastName: "Doe", fullName: () => { return `${this.firstName} ${this.lastName}` }
