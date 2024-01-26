@@ -904,6 +904,8 @@
 
     One caveat though, while JS will covnert a string to an object, it won't do it for a number
     3.toFixed(2) // returns Uncaught SyntaxError: Invalid or unexpected token
+    But if we do const a = 3 then a.toFixed(2) it works
+    That's because toFixed() method is typically used with a number variable or a numeric expression, not directly on a number
 
     We have no choice here than to call it explicitly like so 
     const num = new Number(3)
