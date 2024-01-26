@@ -850,3 +850,19 @@
         console.log(jim) // Person {lastname: 'Halpert', firstname: 'jim'}
         console.log(pam) // Person {lastname: 'beesly', firstname: 'pam'}
     We get back two new objects.Each with their own this variable
+
+#### Function Prototypes
+    So, every function, besides having an optional name, an invocable code also have a prototype, (which is used only by the new operator)
+    So, if we want a function for example getFullName, it would be wiser and more memory efficient to put it inside of the prototype rather than in the constructor, since it would only be created once, and available for every person object
+
+        function Person(firstname, lastname){
+            this.lastname = lastname
+            this.firstname = firstname
+        }
+        Person.prototype.getFullName = function(){
+            return `${this.lastname} ${this.firstname}`
+        }
+        const jim = new Person("jim", "Halpert")
+        const pam = new Person("pam", "beesly")
+        jim.getFullName()
+        pam.getFullName()
