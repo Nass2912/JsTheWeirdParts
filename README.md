@@ -899,5 +899,5 @@
         <!-- this here will refer to the string object constructed -->
     }
 
-    now we can do 
+    now we can do prototypal inheritence and add more to built-in methods
     console.log("Johnny".isLongerThan(3)) // false
