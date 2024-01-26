@@ -866,3 +866,10 @@
         const pam = new Person("pam", "beesly")
         jim.getFullName()
         pam.getFullName()
+    
+    So, remember to always use the new keyword when using function constructors, since without the new keyword, it's just a regular function and since it returns nothing we get undefined back.
+
+        const jim = new Person("jim", "Halpert") // undefiend
+        const pam = new Person("pam", "beesly") // undefined
+        jim.getFullName() // error
+        pam.getFullName() // error
