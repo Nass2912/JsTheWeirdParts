@@ -75,6 +75,36 @@
 
 ##### Scope
         Where a variable at any given time is accesible and available in your code. So if we call a same function twice, that means two execution context, which creates two different spaces in memory.
+        JavaScript variables have 3 types of scope:
+            Block scope
+                Variables declared with let or const inside a { } block cannot be accessed from outside the block
+                    {
+                        let x = 2;
+                    }
+                    console.log(x) // undefined
+                Variables declared with var inside a { } block can be accessed from outside the block.
+                    {
+                        let x = 2;
+                    }
+                    console.log(x) // 2
+                Variables declared within a JavaScript function, are LOCAL to the function:
+                    console.log(carName) // undefined
+
+                    function myFunction() {
+                        let carName = "Volvo";
+                        console.log(carName) // "Volvo"
+                    }
+
+                    console.log(carName) // undefined
+            Function scope
+                JavaScript has function scope: Each function creates a new scope.
+                Variables defined inside a function are not accessible (visible) from outside the function.
+                Variables declared with var, let and const are quite similar when declared inside a function.
+                They all have Function Scope
+            Global scope
+                Variables declared Globally (outside any function) have Global Scope.
+                Global variables can be accessed from anywhere in a JavaScript program.
+                Variables declared with var, let and const are quite similar when declared outside a block.
 
 ##### Scope Chain
         Links to the outer environment from it's lexical position to try and find a variable till it reaches the glocal exectuion context's variable environment
