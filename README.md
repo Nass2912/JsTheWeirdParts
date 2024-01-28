@@ -74,7 +74,7 @@
         Each execution context has one and also a refernce to the outer environment (scope chain)
 
 ##### Scope
-        Where a variable at any given time is accesible and available in your code. So if we call a same function twice, that means two execution context, which creates two different spaces in memory.
+        Scope determines the accessibility of variables, objects, and functions from different parts of the code.
         JavaScript variables have 3 types of scope:
             Block scope
                 Variables declared with let or const inside a { } block cannot be accessed from outside the block
