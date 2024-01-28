@@ -911,6 +911,7 @@
     const num = new Number(3)
     now we can do num.toFixed(2)
     Or even add a custom method, 
+
     Number.prototype.isNegative = function(){
         return this < 0
     }
@@ -918,3 +919,7 @@
     num.isNegative() // false
 
 #### Event Bubbling
+    	Event Bubbling is a concept in the DOM (Document Object Model). It happens when an element receives an event, and that event bubbles up (or you can say is transmitted or propagated) to its parent and ancestor elements in the DOM tree until it gets to the root element.
+
+        This is the default behavior of events on elements unless you stop the propagation using stopPropagation() 
+
