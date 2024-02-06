@@ -17,7 +17,12 @@
                 Reference to the outer environment: It means it has access to its outer (parent) lexical environment.
 
         Scoping - 
-        
+            Scope refers to the availability of variables and functions in certain parts of the code.
+            In JavaScript, a variable has two types of scope:
+                Global Scope
+                    A variable declared at the top of a program or outside of a function is considered a global scope variable.
+                Local Scope
+                    A variable can also have a local scope, i.e it can only be accessed within a function.
             The importance of the physical place that you write your code gives you an idea on where it will sit when compiled and turned to machine language.
             for eg : 
             function test(){
