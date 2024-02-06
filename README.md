@@ -15,6 +15,7 @@
             The lexical environment contains two components:
                 Environment record: It is the actual place where the variable and function declarations are stored.
                 Reference to the outer environment: It means it has access to its outer (parent) lexical environment.
+            The lexical environment is created when a function is called and destroyed when the function returns.
 
         Scoping - 
             Scope refers to the availability of variables and functions in certain parts of the code.
@@ -31,9 +32,11 @@
             };
             the position of the constant a in our function named test gives us an idea on when and where it is going to be available ( scoping). And if not available inside of that function test, it rolls back to the outer lexical environment and so on till it finds the constant a .
         Execution Context - 
-            Imagine a js file that actually does something meaningful. It most probably have multiple functions and/or variables. The execution context gets created whenever we run our js file and creates and  manages the lexical environments. Their are 2 types of execution context, the first one is global and the second one is function execution context and basically is called and created when a function runs.
+            Imagine a js file that actually does something meaningful. It most probably have multiple functions and/or variables. The execution context gets created whenever we run our js file and creates/ manages the lexical environment. Their are 2 types of execution context, the first one is global and the second one is function execution context and basically is called and created when a function runs.
 
             The Global EC(execution context) contains two things by default. rather javascript create them for us. It is the global object and the 'this' keyword. The global object (key value pairs) being anything not inside a function, be it a variable or a function decalration like our test function above. The this keyword is a variable that denotes the actual EC we are into.
+
+            function execution context is created whenever a function is called, and together with it, it's lexical environment is created. The lexical environment is destroyed when the function returns.
         Hoisting and EC- 
             Hoisting is the process whereby the JS engine allocates space in memory for all variables and functions that is declared and created in the entire EC, so it can access them when the code is executed. All of this happens during the creation phase of the EC.
             During the exection phase is when for example variables are assigned values.
