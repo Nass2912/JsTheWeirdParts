@@ -4,7 +4,7 @@
 
 ### First Part
 ##### Execution Context and Lexical environments
-        Syntax Parsers - 
+        Syntax Parsers -
             Ever gotten a compile error on your terminal, be it react, vue or a simple script you've written. Thank this guy for it.
             It's basically a set of rules and strict commands ( specificities of a particular language for eg: ()=>{} to denote an arrow function ) which is run and checks on whether it is correct or not based on the language you're using.
 
